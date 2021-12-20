@@ -1,0 +1,36 @@
+<html>
+    <head><title>Welcome</title></head>
+    <style>
+      body{
+        background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwoICAgICAgHCAcHBwoHBwcHCA8ICQcKFREWFhURExMYHSggGCYlGxMfITEhJSkrLi4uFx8zODMsNygtLisBCgoKDQ0NFQ8PFSsZFRkrKy0tKysrKy0tKzc3LTcrKysrNzc3Ky03Ky0rKysrKysrKysrKysrKysrKysrKysrK//AABEIAKcBLgMBIgACEQEDEQH/xAAZAAEBAQEBAQAAAAAAAAAAAAAAAQIEAwX/xAAWEAEBAQAAAAAAAAAAAAAAAAAAEQH/xAAbAQEBAQEBAQEBAAAAAAAAAAABAgADBQYEB//EABgRAQEBAQEAAAAAAAAAAAAAAAABERIC/9oADAMBAAIRAxEAPwDYsMx62v5okWLFGqSKKNKKKnSi5ig1cFFTqoigFCgFQUzFgVBQFULgqVQVFCooAWKAKqi4MVFATilEXBioqoo5VFEVPKo+VDMUelr53AFbVBCKNKRYsINVIEWDasihAQUgVBSAMFBlwUAVBRigFGKgqK2KAUYoVFGEBWxcFRRhUAcqigDlT50IsWP06+fZixVzG6UysWLBqozFiq2qSCkbTEUgygUYgqsqIKRlEBWJBRlRFIrKiLgBQoNhUFbCLiK2KgqDYpRMUYYoDYpwxYsVOvDxIRYNqpEixRtMSCwOqSKK2lBYRikIqw6qIoQqIRQlFgrKRQYhFCqIoNihQOMKDYqADYVBWxURQOEVBuVRzQaI/H08aMqsIdKEWB0pCKsOlmLFDqkWLAmIKhUKQJAVSkFGICkoKYVRBQkXEU4QA4RUU4oAOEAOKFQOF5QjRHka8hmDRFSnEIsWK1TJFDpIjRFFBQlBQqSCkUUFFQgCiChKChVEFFSEAMjACsUAHCogrCoBxUAFTypCNRI+eleUkI1BUpZg1Ei5SysWEVpQUi5SgsFapBQlFBUKQUXGQUUpBRUKCioUAVIQUVIyCorCAHCALkIAqQioKxWvSEUj5SV52MkahFysyNQXKcZhGki5TiQWCpVIkWEXCkIouFBRcZBRUKCouERRcZBUVIQBchAFERRUhQVHSQgCpCAKkYAVIde5FHxcr8SQUdJWxmEUXKUFHSUokUXKUIouVmRUXCIo6QooLjIKLjIii4UFR0hEUXDEFFSMgDpIRF1FyEAXIQBcjAaip5LriRuJHwMr8rIo6ytjMGoR0lLJFHSVsRGoRcrMkUdJSyjQ6RmSLB1hSIpFxkFHSFEUXGQB0hQUdJGEVFyNBAXIpFEdJGEUdJCAi5GARchd8ID+cSvzpCA6+aUIDrGEB18sAOkZAHSMgDpGEQdYRAdIQB0jADp5ZEUdIUAdYwgLjCAvyRAdfJAHSMIC8ZE0FKf/2Q==);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      #evebutt{
+        width:270px; 
+        font-size: 25px;
+        height: 30px;
+        border: 3.5px solid rgb(88, 25, 25);
+        padding: 10px;
+        text-align: center;
+    }
+    #title{
+        font-size: 79px; 
+        color: rgb(1, 1, 49); 
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+    </style>
+    <body>
+        <div>
+            <center>
+                <u><h1 id="title"">Don't Remember</h1></u>
+                <h1 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Your name</h1>
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <input id="evebutt" type="text" name="eventname" autofocus><br>
+                    <br><button style="width: 150px; font-size: 20px;">Submit</button>
+                </form>
+            </center>
+        </div>
+    </body>
+</html>

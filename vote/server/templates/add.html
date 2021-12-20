@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Add your Task</title>
+        <style>
+            body{
+                background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpng.pngtree.com%2Fthumb_back%2Ffw800%2Fback_our%2F20190621%2Fourmid%2Fpngtree-colorful-gradient-light-rose-texture-background-image_200631.jpg&f=1&nofb=1);
+                background-size: cover;
+            }
+            #title{
+                font-size: 50px;
+                font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+            }
+            #home{
+                font-size: 40px;
+                width: auto;
+                color: rgb(6, 6, 34); 
+                margin-top: 25;
+            }
+            #inp{
+                border:3px solid maroon; 
+                padding: 10px;
+                width: 30%;
+                font-size:30px;
+            }
+        </style>
+        <script>
+            function alert(){
+                const temp = document.querySelector('#inp').value;
+                if(temp == ""){
+                    alert("Enter a valid task !!!");
+                }
+            }
+        </script>
+    </head>
+    <body><center>
+        <label><h1 id="title">Add new Task</h1></label>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <br><input type="text" name="choice" id="inp" autofocus >
+            <br><button style="font-size: 20px; margin-top: 20px;" onclick="alert()">+</button>
+        </form>
+        
+        <a href="{% url 'server:home' %}" ><button id="home">Home</button></a>
+        <hr width="40%" size="2px" color="maroon">
+        <br><br><label style="margin-top: 40px; font-size: 30px; ">{{temp}}</label>
+    </center>
+    </body>
+</html>
